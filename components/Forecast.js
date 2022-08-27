@@ -16,11 +16,11 @@ export default function Forecast(props) {
             </View>
 
             <View style = {styles.container}>
-                <Text style = {styles.textNUM} >{props.temp} °C</Text>
+                <Text style = {styles.textNUM} > Temp: {props.temp} °C</Text>
             </View>
 
             <View style = {styles.container}>
-                <Text style = {styles.textNUM} >{props.humidity} %</Text>
+                <Text style = {styles.textNUM} >Humidity: {props.humidity} %</Text>
             </View>
 
         </View >
