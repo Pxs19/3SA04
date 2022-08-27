@@ -6,6 +6,8 @@ import Constants from 'expo-constants';
 
 export default function Weather(props) {
 
+    const [date, setDate] = useState(new Date().toLocaleString());
+
 
 
     useEffect(() => {
