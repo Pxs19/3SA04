@@ -27,7 +27,7 @@ export default function Weather(props) {
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
-                        
+                        name: json.weather[0].name,
                         temp: json.main.temp,
                         humidity: json.main.humidity,
                         icon: json.weather[0].icon,
@@ -36,7 +36,7 @@ export default function Weather(props) {
                     });
                 })
                 .catch((error) => {
-                    console.warn(error);
+                    console.warn(error);ฤ
                 });
 
         }
@@ -49,7 +49,7 @@ export default function Weather(props) {
         temp: 0,
         humidity: 0,
         icon: ' ',
-        
+        name: 'name',
         pressure: 0,
 
 
