@@ -27,9 +27,12 @@ export default function Weather(props) {
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
+                        
                         temp: json.main.temp,
                         humidity: json.main.humidity,
-                        icon: json.weather[0].icon
+                        icon: json.weather[0].icon,
+                        
+                        pressure: json.main.pressure,
                     });
                 })
                 .catch((error) => {
@@ -46,6 +49,9 @@ export default function Weather(props) {
         temp: 0,
         humidity: 0,
         icon: ' ',
+        
+        pressure: 0,
+
 
 
 
@@ -82,7 +88,7 @@ const styles = StyleSheet.create({
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.4)',
         borderWidth: 1,
-        borderRadius: 20,
+        borderRadius: 10,
         borderColor: 'black',
         alignItems: 'center'
         

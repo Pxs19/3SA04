@@ -5,7 +5,10 @@ import Constants from 'expo-constants';
 export default function Forecast(props) {
     return (
         <View style = {styles.container}>
+            
             <Text style = {styles.textforMain}>{props.main}</Text>
+
+            
 
             <View>
                 <Image style={{width:100,height:100}} source={{uri: 'http://openweathermap.org/img/wn/'+props.icon+'@2x.png'}}/>
@@ -21,6 +24,12 @@ export default function Forecast(props) {
 
             <View style = {styles.container}>
                 <Text style = {styles.textNUM} >Humidity: {props.humidity} %</Text>
+            </View>
+
+            
+
+            <View style = {styles.container}>
+                <Text style = {styles.textNUM} >pressure: {props.pressure} hPa</Text>
             </View>
 
         </View >
@@ -51,7 +60,7 @@ const styles = StyleSheet.create({
     },
 
     textNUM: {
-        fontSize: 35,
+        fontSize: 20,
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center'
