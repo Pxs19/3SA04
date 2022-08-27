@@ -8,6 +8,14 @@ export default function Weather(props) {
 
     const [date, setDate] = useState(new Date().toLocaleString());
 
+    useEffect(() => {
+        let secTimer = setInterval(() => {
+            setDate(new Date().toLocaleString())
+        }, 1000)
+
+        return () => clearInterval(secTimer);
+    }, []);
+
 
 
     useEffect(() => {
@@ -49,6 +57,7 @@ export default function Weather(props) {
 
             <View style={styles.highlight}>
                 <Text style={styles.textStyle}>Zip Code is {props.zipCode}</Text>
+                <Text style={styles.textStyle}>{date}</Text>
                 <Forecast {...forecastInfo} />
             </View>
 
