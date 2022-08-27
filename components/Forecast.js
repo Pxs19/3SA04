@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import Constants from 'expo-constants';
 
 export default function Forecast(props) {
     return (
         <View style = {styles.container}>
             <Text style = {styles.textforMain}>{props.main}</Text>
+
+            <View>
+                <Image style={{width:100,height:100}} source={{uri: 'http://openweathermap.org/img/wn/'+props.icon+'@2x.png'}}/>
+            </View>
 
             <View style = {styles.container}>
                 <Text style = {styles.textStyle}>{props.description}</Text>

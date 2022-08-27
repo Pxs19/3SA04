@@ -35,6 +35,7 @@ export default function Weather(props) {
         description: 'description',
         temp: 0,
         humidity: 0,
+        icon: ' ',
 
 
 
